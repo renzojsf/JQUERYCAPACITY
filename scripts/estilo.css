@@ -13,3 +13,22 @@
 	background-color: blue;
 	
 }
+
+.Cls_Fondo1{
+ background-image: url(../im/m1.png);
+ background-position: center center;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-size: cover;
+       background-color: #464646;
+}
+
+.Cls_Fondo2{
+background-image: url(../im/m2.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color: #464646;
+}
+ 

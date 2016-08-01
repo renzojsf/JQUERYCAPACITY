@@ -39,19 +39,27 @@
 			parra2.click(function(){
 				$('.parrafo').removeClass('Cls_seleccion');	
 			});
-/*
+
 			$('#btdt').click(function(){
 				$('#TercerParra').addClass('Cls_seleccion');
 			});
-			$('#btd-').click(function(){
+			$('#btdtm').click(function(){
 				$('#TercerParra').removeClass('Cls_seleccion');
 			});
-		*/
+			
+			$('#botonimage').click(function(){
+				$('#cuerpo').removeClass('Cls_Fondo2');
+				$('#cuerpo').addClass('Cls_Fondo1');
+			});
+			$('#botonimage2').click(function(){
+				$('#cuerpo').removeClass('Cls_Fondo1');
+				$('#cuerpo').addClass('Cls_Fondo2');
+			});
 		});
 
 	</script>
 </head>
-<body>
+<body id="cuerpo" class="">
 <input type="button" name="presiona" id="Bot1" value="+">
 <img src="im/im.jpg" alt="Img - Perdida" id="cafe" height="200" width="200">
 <fieldset>
@@ -71,7 +79,13 @@
 	<p id="TercerParra">Directo</p>
 	<p class="Tercer parrafp">Tercer parrafo</p>
 	<input type="button" name="btd+" id="btdt" value="+">
-	<input type="button" name="btd-"  value="-">
+	<input type="button" name="btd-" id="btdtm" value="-">
+</fieldset>
+<fieldset>
+	<p id="Cuarto">Cambiar de fondo</p>
+	
+	<input type="button" name="botonimage" id="botonimage" value="1">
+	<input type="button" name="botonimage2" id="botonimage2" value="2">
 </fieldset>
 </body>
 </html>
