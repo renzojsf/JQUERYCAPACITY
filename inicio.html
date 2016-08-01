@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="scripts/jquery-3.1.0desarrollo.js">	
+	</script>
+	<link rel="stylesheet" type="text/css" href="scripts/estilo.css">
+
+	<script type="text/javascript">
+		//alert("hola");
+		$(function(){
+			
+			var ocu= $('#cafe'); 
+			ocu.click(function(){
+				ocu.slideUp();	
+			});
+			var mostra= $('#Bot1'); 
+			mostra.click(function(){
+				ocu.show();	
+			});
+
+
+			var sombrea= $('#Bot2'); 
+			sombrea.click(function(){
+				$('#subtitulo').addClass('Cls_seleccion');	
+			});
+			var quita= $('#Bot3'); 
+			quita.click(function(){
+				$('#subtitulo').removeClass('Cls_seleccion');	
+			});
+
+
+			var parra2= $('.botonpre'); 
+			parra2.click(function(){
+				$('.parrafo').addClass('Cls_seleccion');	
+			});
+			var parra2= $('.botonpre-'); 
+			parra2.click(function(){
+				$('.parrafo').removeClass('Cls_seleccion');	
+			});
+/*
+			$('#btdt').click(function(){
+				$('#TercerParra').addClass('Cls_seleccion');
+			});
+			$('#btd-').click(function(){
+				$('#TercerParra').removeClass('Cls_seleccion');
+			});
+		*/
+		});
+
+	</script>
+</head>
+<body>
+<input type="button" name="presiona" id="Bot1" value="+">
+<img src="im/im.jpg" alt="Img - Perdida" id="cafe" height="200" width="200">
+<fieldset>
+	<p>Por ID</p>
+	<p id="subtitulo">Primer parrafo</p>
+	<input type="button" name="presiona" id="Bot2" value="+">
+	<input type="button" name="presiona" id="Bot3" value="-">
+</fieldset>
+<fieldset>
+	<p id="SegundoSub">Por Clase</p>
+	<p class="parrafo">Segundo parrafo</p>
+	<input type="button" name="bttitulo" id="bttitulo" value="titulo">
+	<input type="button" name="presiona" class="botonpre" value="+">
+	<input type="button" name="presiona" class="botonpre-" value="-">
+</fieldset>
+<fieldset>
+	<p id="TercerParra">Directo</p>
+	<p class="Tercer parrafp">Tercer parrafo</p>
+	<input type="button" name="btd+" id="btdt" value="+">
+	<input type="button" name="btd-"  value="-">
+</fieldset>
+</body>
+</html>
