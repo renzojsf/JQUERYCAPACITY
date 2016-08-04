@@ -1,19 +1,13 @@
-#subtitulo{
-	color: red;
-	font-size: 18px;
-}
+
 .Cls_seleccion{
 	font-weight: bold;
 	background-color: #FFFF66;
 	
 }
-#titulo{
-	font-weight: bold;
-	font-size: 18px;
-	background-color: blue;
-	
-}
 
+.titul_post{
+	color: red;
+}
 .Cls_Fondo1{
  background-image: url(../im/m1.png);
  background-position: center center;

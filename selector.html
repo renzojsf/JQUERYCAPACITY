@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,17 +11,15 @@
 	<script type="text/javascript">
 		//alert("hola");
 		$(function(){
-			
-			var ocu= $('#cafe'); 
+			var ocu= $('#imagencafe'); 
 			ocu.click(function(){
 				ocu.slideUp();	
 			});
-			var mostra= $('#Bot1'); 
+			var mostra= $('#mostraima'); 
 			mostra.click(function(){
 				ocu.show();	
 			});
-
-
+//Primer Fieldset
 			var sombrea= $('#Bot2'); 
 			sombrea.click(function(){
 				$('#subtitulo').addClass('Cls_seleccion');	
@@ -29,8 +28,7 @@
 			quita.click(function(){
 				$('#subtitulo').removeClass('Cls_seleccion');	
 			});
-
-
+//Primer Fieldset
 			var parra2= $('.botonpre'); 
 			parra2.click(function(){
 				$('.parrafo').addClass('Cls_seleccion');	
@@ -39,7 +37,7 @@
 			parra2.click(function(){
 				$('.parrafo').removeClass('Cls_seleccion');	
 			});
-
+//Directo
 			$('#btdt').click(function(){
 				$('#TercerParra').addClass('Cls_seleccion');
 			});
@@ -54,38 +52,60 @@
 			$('#botonimage2').click(function(){
 				$('#cuerpo').removeClass('Cls_Fondo1');
 				$('#cuerpo').addClass('Cls_Fondo2');
+			});	
+			$("#h2").click(function(){
+			;
+				$('h2').addClass('Cls_seleccion');
+			});
+			//dentro de div
+			$("#Pintalo").click(function(){
+
+		$("div p").addClass("Cls_seleccion");
+				
 			});
 		});
 
 	</script>
 </head>
-<body id="cuerpo" class="">
-<input type="button" name="presiona" id="Bot1" value="+">
-<img src="im/im.jpg" alt="Img - Perdida" id="cafe" height="200" width="200">
+<body id="cuerpo" >
+<input type="button" name="presiona" id="mostraima" value="+">
+<img src="im/im.jpg"  id="imagencafe" height="200" width="200">
+
 <fieldset>
-	<p>Por ID</p>
+	<h2>Por ID</h2>
 	<p id="subtitulo">Primer parrafo</p>
 	<input type="button" name="presiona" id="Bot2" value="+">
 	<input type="button" name="presiona" id="Bot3" value="-">
 </fieldset>
 <fieldset>
-	<p id="SegundoSub">Por Clase</p>
+	<h2>Por Clase</h2>
 	<p class="parrafo">Segundo parrafo</p>
-	<input type="button" name="bttitulo" id="bttitulo" value="titulo">
 	<input type="button" name="presiona" class="botonpre" value="+">
 	<input type="button" name="presiona" class="botonpre-" value="-">
 </fieldset>
 <fieldset>
-	<p id="TercerParra">Directo</p>
-	<p class="Tercer parrafp">Tercer parrafo</p>
+	<h2>Directo</h2>
+	<p id="TercerParra">Tercer parrafo</p>
 	<input type="button" name="btd+" id="btdt" value="+">
 	<input type="button" name="btd-" id="btdtm" value="-">
 </fieldset>
+
 <fieldset>
-	<p id="Cuarto">Cambiar de fondo</p>
-	
+	<h2>Cambiar de fondo</h2>
 	<input type="button" name="botonimage" id="botonimage" value="1">
 	<input type="button" name="botonimage2" id="botonimage2" value="2">
+	<input type="button" id="h2" value="cambiacolor">
 </fieldset>
+
+
+<h2>En un div</h2>
+<input type="button" id="Pintalo" value="Pinta Titulo Post">
+<fieldset>
+	<div >
+		<label id="titulodiv">Entro del div</label>
+		<p id="contenidopost">Contenido de div</p>
+	</div>
+</fieldset>
+
 </body>
 </html>
