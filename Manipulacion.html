@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="scripts/jquery-3.1.0desarrollo.js">	
+	</script>
+	<link rel="stylesheet" type="text/css" href="scripts/estilo.css">
+
+	<script type="text/javascript">
+		$(function(){
+			$("#agrega").click(function(){
+				$('#telefonos').append('<div><input type="text" id="te"><button id="borra" onclick="felimina(this)";>B </button></div>');
+			});	
+			
+			$('#btenvia').click(function(){
+			var tele=$('#te').val() ;
+			 if(typeof tele === 'undefined'){var tele='nop  tiene';};
+				var nombre =$('#nombre').val();
+				var pass=$('#pas').val();
+				$("<h2>" + nombre + "-" + pass + "-" + tele + "</h2>").replaceAll("#formulario");
+			});
+		});
+	function felimina(esto){$(esto).parent().remove();}
+	</script>
+</head>
+<body id="cuerpo" >
+<div id="formulario">
+	<div><h1>Envio</h1></div>
+
+	<fieldset>
+	
+		<label>Nombre</label><input type="text"  id="nombre" >
+		<label>PASS</label><input type="text" id="pas">
+		<fieldset id="telefonos">
+			<legend><strong>Telefonos</strong></legend>
+				<div>
+					<input type="text" placeholder="Ingrese">
+				</div>
+		</fieldset>
+	</fieldset>
+	<div>
+		<button id="btenvia">Envia</button>
+		<button id="agrega">agrega</button>
+	</div>
+
+</div>
+
+</body>
+</html>
