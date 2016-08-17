@@ -1,28 +1,18 @@
 
 .Cls_seleccion{
 	font-weight: bold;
-	background-color: #FFFF66;
-	
+	background-color: #FFFF66;	
 }
 
 .titul_post{
 	color: red;
 }
-.Cls_Fondo1{
- background-image: url(../im/m1.png);
- background-position: center center;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-     background-size: cover;
-       background-color: #464646;
-}
+.notifierror{
+color: red;
+border: solid 3px red;
+} 
 
-.Cls_Fondo2{
-background-image: url(../im/m2.jpg);
-background-position: center center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-background-color: #464646;
-}
+.Cls_Fondo1{background-image: url(../im/m1.png);background-position: center center; background-repeat: no-repeat;background-attachment: fixed; background-size: cover;background-color: #464646;}
+
+.Cls_Fondo2{background-image: url(../im/m2.jpg);background-position: center center;background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-color: #464646;}
  

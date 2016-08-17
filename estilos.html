@@ -14,12 +14,30 @@
 			});	
 			
 			$('#btenvia').click(function(){
-			var tele=$('#te').val() ;
-			 if(typeof tele === 'undefined'){var tele='nop  tiene';};
+				var tele=$('#te').val() ;
+				 if(typeof tele === 'undefined'){var tele='nop  tiene';};	
+				
+				var nombre =$('#nombre').val();
+				var pass=$('#pas').val();
+				var formulario= true;
 
-			var nombre =$('#nombre').val();
-			var pass=$('#pas').val();
-			$("<h2>" + nombre + "-" + pass + "-" + tele + "</h2>").replaceAll("#formulario");
+				$('input').each(function(posicion,elemento){
+					if($(elemento).val()==''){
+						$(elemento).addClass('notifierror');
+						$(elemento).attr('placeholder','Ingresar');
+						formulario= false;
+					}else{
+						$(elemento).removeClass('notifierror');
+					}
+				});
+				if(formulario==true){
+					$("<h2>" + nombre + "-" + pass + "-" + tele + "</h2>").replaceAll("#formulario");
+				}
+					
+
+
+			
+
 
 			});
 		});
@@ -37,7 +55,7 @@
 		<fieldset id="telefonos">
 			<legend><strong>Telefonos</strong></legend>
 				<div>
-					<input type="text" placeholder="Ingrese">
+					<input type="text" id="te" placeholder="Ingrese">
 				</div>
 		</fieldset>
 	</fieldset>
