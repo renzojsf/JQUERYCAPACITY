@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="scripts/jquery-3.1.0desarrollo.js">	
+	</script>
+	<link rel="stylesheet" type="text/css" href="scripts/estilo.css">
+
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			//alert("carga completa");
+			$("#btbt,#btbt2").click(function(){
+				alert("click");
+			});
+			//agrega
+			$("#tb2").bind('click',function(){
+				alert("click");
+			});
+			//remueve
+			$("#btbt2").unbind('click');
+			
+			$("form").submit(function(){
+				$("form input").each(function(posi,ele){
+					if($(ele).val()==''){
+						alert('El elemento:' + posi );
+					};
+				});
+			});
+		});
+		$(function(){
+		//alert("carga completa 2");
+		});
+	</script>
+</head>
+<body id="cuerpo" >
+<div id="formulario">
+	<fieldset>
+	<form>
+		<label>Nombre</label>
+		<input type="text" id="nombre">
+		<label>Apellido</label>
+		<input type="text" id="apellido">
+		<label>Edad</label>
+		<input type="text" id="edad">
+		<br>
+		<button type="submit" id="btsub" >envia</button>
+	
+	</form>
+	<button type="button" id="tb2" >binf</button>
+		<button type="button" id="btbt2" >btbt2</button>
+</fieldset> 
+</div>
+</body>
+</html>

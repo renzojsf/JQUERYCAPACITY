@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="scripts/jquery-3.1.0desarrollo.js">	
+	</script>
+	<link rel="stylesheet" type="text/css" href="scripts/estilo.css">
+
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			$('#show').click(function(){
+				$('#ima').show('slow');	});
+			$('#hide').click(function(){
+				$('#ima').hide(2000);});
+
+			$('#fade').click(function(){
+				$('#ima').fadeIn('slow');});
+			$('#fadeout').click(function(){
+				$('#ima').fadeOut('slow');});
+
+			$('#slideup').click(function(){
+				$('#ima').slideUp();});
+			$('#slided').click(function(){
+				$('#ima').slideDown();});
+		});
+	</script>
+</head>
+<body id="cuerpo" >
+<div id="formulario">
+	<img src="im/im.jpg"  id="ima" height="200" width="200">
+		<button type="button" id="show" >show</button>
+		<button type="button" id="hide" >hide</button>
+
+		<button type="button" id="fade" >fade in</button>
+		<button type="button" id="fadeout" >fade out</button>
+
+		<button type="button" id="slideup" >slideup</button>
+		<button type="button" id="slided" >slide doun</button>
+
+</div>
+</body>
+</html>

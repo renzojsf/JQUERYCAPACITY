@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="scripts/jquery-3.1.0desarrollo.js">	</script>
+	<link rel="stylesheet" type="text/css" href="ui/jquery-ui.css">
+	<script type="text/javascript" src="ui/jquery-ui.js">	</script>
+
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			$(document).tooltip();
+	
+
+			$('#jquery_ui_btn').button();
+			$('#jquery_ui_btn2').button({disabled:true});
+			//$("#acordeon").accordion();
+			$("#acordeon").accordion({active:2});
+			$("#acordeon").resizable();
+			$('#jquery_ui_btn3').resizable();
+		});
+	
+	</script>
+</head>
+<body id="cuerpo" >
+<div id="formulario">
+	<button id="jquery_ui_btn" title="primer boton">Buton</button>
+	<button id="jquery_ui_btn2" title="segu disa" >Buton</button>
+	<button id="jquery_ui_btn3" title="primer boton">Buton</button>
+</div>
+<div id="acordeon">
+	<h3>Titulo1</h3>
+		<div>
+			<p>pssfapfas</p>
+		</div>
+		<h3>Titulo2</h3>
+		<div>
+			<p>pssfapfas</p>
+		</div>
+		<h4>Titulo3</h4>
+		<div>
+			<p>pssfapfas</p>
+		</div>
+</div>
+</body>
+</html>
